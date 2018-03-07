@@ -120,3 +120,13 @@ Just like they are used in methods, there is no reason why they shouldn't in con
 - Using default and named arguments is helpful and decrease the need of having ancillary (secondary) constructors.
   However, as a personal opinion, a constructor with a lot of parameters is a bit hard to read / use. Instead, I
   would have a few more constructors.
+
+#### Methods in Classes
+
+No mystery here. Just like Java, except for some improvements, Scala has the methods in classes. We have already seen some, bu in the script files we worked with.
+
+- Methods have access to the internal state of objects and hence can modify their state.
+- Default and named parameters are also allowed. That helps a lot! Why? Instead of defining methods to change the state, we can use the Memento Pattern and create a copy of an object,
+  keep the state on the member we want and changing those we don't.
+
+For further details please refer to the ```Computer.scala``` class.
