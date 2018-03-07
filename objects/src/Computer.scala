@@ -15,4 +15,5 @@ import scala.beans.BeanProperty
 
 class Computer(@BeanProperty var memory:Int,
                @BeanProperty val cpu:Double,
-               @BeanProperty var disk:Int)
+               @BeanProperty var disk:Int,
+               @BeanProperty var usb:Int = 2)
