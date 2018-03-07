@@ -93,3 +93,13 @@ the language.
 
 * Classes
 - Have a look at the ```Person.scala``` and the ```PersonScript.scala```. There is a lot of documentation available there.
+
+* Accessor and Mutators
+- From a Java perspective, the Getters and Setters are analogous to Scala's accessors and mutators.
+- If one needs Java style Getters and Setters, the scala.beans.BeanProperty annotation can be used on the constructor parameters.
+  Have a look at the ```Computer.scala``` class.
+
+* Constructors
+- The primary constructor is expected to have all the information that is needed to create an object of the class. The remaining constructors
+  must always call the primary one, either directly or via another constructor.
+- There are no empty constructors in immutable languages in order to avoid excessive copy and memory consumption.
