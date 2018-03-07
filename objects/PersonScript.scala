@@ -12,8 +12,14 @@
 * The $eq is an operator character and is equivalent to: p.lastName = "blah blah"
 */
 
-val p = new Person("Wilder", "Rodrigues")
-println(p.firstName)
+// Using the secondary constructor
+val p1 = new Person("Wilder", "Rodrigues")
+println(p1.firstName)
 
-p.lastName = "Cabral Rodrigues"
-println(p.lastName)
+p1.lastName = "Cabral Rodrigues"
+println(p1.lastName)
+println(p1.address)
+
+// Using the primary constructor
+val p2 = new Person("Wilder", "Rodrigues", "Netherlands")
+println(p2.address)
