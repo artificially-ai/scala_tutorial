@@ -130,3 +130,17 @@ No mystery here. Just like Java, except for some improvements, Scala has the met
   keep the state on the member we want and changing those we don't.
 
 For further details please refer to the ```Computer.scala``` class.
+
+#### Precondition and Exceptions
+
+- Constructors and methods' parameters can be checked for preconditions with ```require```, ```assert```,  ```assume``` or ```ensuring```. Each of them behaving
+  slightly different from each other. For instance, a ```require``` throws an ```IllegalArgumentException``` if a condition is not met. When it comes
+  to ```assert``` and ```assume```, an AssertionError is thrown. Both are used for static checking, differing only in intent. The prior is a predicate whilst the latter is an axiom.
+- Some more details about the other two, ```require``` and ```ensuring```, they are used as a mean of design-by-controct specification.
+- In order to disable the checker, use -Xdisable-assertions, which raises -Xelide-below above elidable.ASSERTION.
+- Exceptions in Scala are handled in a similar fashion as they are in Java. The main difference is that the ```catch``` block uses a matching patters to check which exception
+  has actually been thrown.
+- Just like in Java, you can also have a ```finally``` block.
+- All exceptions in Scala are Runtime.
+
+To get a glimpse on how it all works, have a look at the ```Computer.scala``` class and the ```ComputerScript.scala```. Remember: if you don't explicitly check them, they will look ugly on the console, browser, etc.
