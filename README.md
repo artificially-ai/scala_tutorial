@@ -11,14 +11,17 @@ Contains some code and documentation about how to get started with Scala.
 
 - ```brew install scala```
 
+## Where to find the code
+
+All script related code can be found under ```scripts```. There I have written basic examples on conditional and loop statements, using both imperative and functional approaches.
+There is also some examples of methods, types, units and parameterisation (equivalent to Java generics).
+
+The more Object Oriented related code can be found under objects.  The classes contain documentation, thus better to refer to what is written there as well. They also contain details
+about compiling and running the code and inspecting the byte-code.
+
+This is all work in progress, so bare with me whilst I work on some more advanced examples.
+
 ## Some general notes
-
-Please, make sure to read the comments on the code for more explanation about what's
-going on.
-
-The objects directory contains the Scala classes I'm working with (still WIP).
-The scripts directory contains some basic code with Scala, exploring some aspects of
-the language.
 
 - Pros
 * Type inference
