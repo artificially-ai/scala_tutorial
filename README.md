@@ -23,18 +23,18 @@ This is all work in progress, so bare with me whilst I work on some more advance
 
 ## Some general notes
 
-- Pros
+#### Pros
 * Type inference
 * Static types
 * Community support
 * Pattern matching, clean syntax, API, currying, partial functions, operator overloading.
 
-- Cons
+#### Cons
 * It’s difficult.
 * Backwards compatibility.
     * Not that much.
 
-* The Basics
+#### The Basics
 - val: defines a final variable, a constant, cannot be changed after a value is assigned to it.
     - ```val a = 100```
         - Type inference will make it an integer
@@ -52,7 +52,7 @@ This is all work in progress, so bare with me whilst I work on some more advance
 - Escape reserved keywords (with a backtick)
     - ```val `import`  = 10```
 
-* Primitives
+#### Primitives
 - Byte
     - ```val a:Byte = 10```
 - Short
@@ -74,7 +74,7 @@ This is all work in progress, so bare with me whilst I work on some more advance
 - AnyVal inherits from Any, which is the mother of everything.
 - AnyRef inherits from Any as well, and all objects inherit from AnyRef
 
-* Operator overloading
+#### Operator overloading
 - ```1.+(4)``` -> prints 5
 - ```-5.abs``` -> prints 5
 - It uses implicit wrapping (by rich wrappers).
@@ -82,27 +82,29 @@ This is all work in progress, so bare with me whilst I work on some more advance
     - ```import scala.math.pow```
     - ```def **(x:Int, ex:Int) = pow(x, exp)```
 
-* Units
+#### Units
 - Unit is something you get when there is nothing to give. It’s like “void” in Java.
     - ```val g:Unit = ()```
 
-* Method in Method
+#### Method in Method
 - Cool idea of having methods inside methods. The closest thing to it that I would say Java has is anonymous classes, which are not cool anyway.
 - This keeps code cleaner and the scope of the inner-method is limited by the outer-method.
-* Method overloading
+
+#### Method overloading
 - Works just like in Java. Nothing special there.
 
-* Parameterisation in Scala is analogous to Generics in Java. It helps to keep the code more polymorphic and abolish the use of isInstanceOf and asInstanceOf (casting).
+#### Parameterisation
+- This is analogous to Generics in Java. It helps to keep the code more polymorphic and abolish the use of isInstanceOf and asInstanceOf (casting).
 
-* Classes
+#### Classes
 - Have a look at the ```Person.scala``` and the ```PersonScript.scala```. There is a lot of documentation available there.
 
-* Accessor and Mutators
+#### Accessor and Mutators
 - From a Java perspective, the Getters and Setters are analogous to Scala's accessors and mutators.
 - If one needs Java style Getters and Setters, the scala.beans.BeanProperty annotation can be used on the constructor parameters.
   Have a look at the ```Computer.scala``` class.
 
-* Constructors
+#### Constructors
 - The primary constructor is expected to have all the information that is needed to create an object of the class. The remaining constructors
   must always call the primary one, either directly or via another constructor.
 - There are no empty constructors in immutable languages in order to avoid excessive copy and memory consumption.
