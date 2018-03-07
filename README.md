@@ -105,6 +105,9 @@ This is all work in progress, so bare with me whilst I work on some more advance
   Have a look at the ```Computer.scala``` class.
 
 #### Constructors
+- The class ```Person.scala``` contains the implementation of a few constructors. Please, read the documentation there.
 - The primary constructor is expected to have all the information that is needed to create an object of the class. The remaining constructors
   must always call the primary one, either directly or via another constructor.
 - There are no empty constructors in immutable languages in order to avoid excessive copy and memory consumption.
+- Constructors are defined just like a method, but they are called ```this```. To have a multi-lined constructor, just use curly-brackets.
+- The first line of an ancillary constructor has to be a call to another constructor.
