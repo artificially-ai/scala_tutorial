@@ -111,3 +111,12 @@ This is all work in progress, so bare with me whilst I work on some more advance
 - There are no empty constructors in immutable languages in order to avoid excessive copy and memory consumption.
 - Constructors are defined just like a method, but they are called ```this```. To have a multi-lined constructor, just use curly-brackets.
 - The first line of an ancillary constructor has to be a call to another constructor.
+
+#### Default and Named Parameters
+
+Just like they are used in methods, there is no reason why they shouldn't in constructors. Isn't it lovely?
+
+- All required self-explanatory code can be found in the ```Computer.scala``` class.
+- Using default and named arguments is helpful and decrease the need of having ancillary (secondary) constructors.
+  However, as a personal opinion, a constructor with a lot of parameters is a bit hard to read / use. Instead, I
+  would have a few more constructors.
