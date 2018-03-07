@@ -24,17 +24,20 @@ This is all work in progress, so bare with me whilst I work on some more advance
 ## Some general notes
 
 #### Pros
+
 * Type inference
 * Static types
 * Community support
 * Pattern matching, clean syntax, API, currying, partial functions, operator overloading.
 
 #### Cons
+
 * It’s difficult.
 * Backwards compatibility.
     * Not that much.
 
 #### The Basics
+
 - val: defines a final variable, a constant, cannot be changed after a value is assigned to it.
     - ```val a = 100```
         - Type inference will make it an integer
@@ -53,6 +56,7 @@ This is all work in progress, so bare with me whilst I work on some more advance
     - ```val `import`  = 10```
 
 #### Primitives
+
 - Byte
     - ```val a:Byte = 10```
 - Short
@@ -75,6 +79,7 @@ This is all work in progress, so bare with me whilst I work on some more advance
 - AnyRef inherits from Any as well, and all objects inherit from AnyRef
 
 #### Operator overloading
+
 - ```1.+(4)``` -> prints 5
 - ```-5.abs``` -> prints 5
 - It uses implicit wrapping (by rich wrappers).
@@ -83,28 +88,35 @@ This is all work in progress, so bare with me whilst I work on some more advance
     - ```def **(x:Int, ex:Int) = pow(x, exp)```
 
 #### Units
+
 - Unit is something you get when there is nothing to give. It’s like “void” in Java.
     - ```val g:Unit = ()```
 
 #### Method in Method
+
 - Cool idea of having methods inside methods. The closest thing to it that I would say Java has is anonymous classes, which are not cool anyway.
 - This keeps code cleaner and the scope of the inner-method is limited by the outer-method.
 
 #### Method overloading
+
 - Works just like in Java. Nothing special there.
 
 #### Parameterisation
+
 - This is analogous to Generics in Java. It helps to keep the code more polymorphic and abolish the use of isInstanceOf and asInstanceOf (casting).
 
 #### Classes
+
 - Have a look at the ```Person.scala``` and the ```PersonScript.scala```. There is a lot of documentation available there.
 
 #### Accessor and Mutators
+
 - From a Java perspective, the Getters and Setters are analogous to Scala's accessors and mutators.
 - If one needs Java style Getters and Setters, the scala.beans.BeanProperty annotation can be used on the constructor parameters.
   Have a look at the ```Computer.scala``` class.
 
 #### Constructors
+
 - The class ```Person.scala``` contains the implementation of a few constructors. Please, read the documentation there.
 - The primary constructor is expected to have all the information that is needed to create an object of the class. The remaining constructors
   must always call the primary one, either directly or via another constructor.
@@ -144,3 +156,11 @@ For further details please refer to the ```Computer.scala``` class.
 - All exceptions in Scala are Runtime.
 
 To get a glimpse on how it all works, have a look at the ```Computer.scala``` class and the ```ComputerScript.scala```. Remember: if you don't explicitly check them, they will look ugly on the console, browser, etc.
+
+#### Inheritance (Subclasses)
+
+- Just like with Java, the keyword ```extends``` is used to denote inheritance, a is-a relationship.
+- Again, like in Java, attributer that belong to the superclass are sent to its constructor.
+- And guess what, polymorphism also applies.
+
+But wait! That doesn't have anything to do with Java, that's all about Object Orientation. Ah, we are fine! ;)
