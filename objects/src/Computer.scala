@@ -1,4 +1,5 @@
 import scala.beans.BeanProperty
+import scala.annotation.elidable
 
 /*
 * Here we user 'var' for both memory and disk properties as those are cable to  be updated.
@@ -17,6 +18,9 @@ class Computer(@BeanProperty var memory:Long,
                @BeanProperty val cpu:Double,
                @BeanProperty val disk:Int,
                @BeanProperty val usb:Int = 2) {
+
+  require(memory >= 8192, "Memory must be greater than or equal to 8192.")
+  require(cpu >= 1.5, "CPU must be greater than or equal to 1.5.")
 
   // Not the more elegant way.
   // 1. To enforce immutability, we do not change the internal state of the object, but instead we create a new one.
