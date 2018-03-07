@@ -15,9 +15,9 @@
 * Compiling it: scalac -d classes Person.scala
 */
 
-class Person(val firstName:String, var lastName:String, var address:String = "Unknown") {
+class Person(val firstName:String, val lastName:String, val address:String = "Unknown") {
 
   // As you can see, the ancillary constructor needs no 'val' or 'var' declaration.
   // It's all done in the primary constructor, which already declares all the class needs.
-  def this(firstName:String, lastName:String) = this(firstName, lastName)
+  def this(firstName:String, lastName:String) = this(firstName, lastName, "Netherlands")
 }
