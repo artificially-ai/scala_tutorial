@@ -13,7 +13,23 @@ import scala.beans.BeanProperty
 * javap -p -cp classes Computer
 */
 
-class Computer(@BeanProperty var memory:Int,
+class Computer(@BeanProperty var memory:Long,
                @BeanProperty val cpu:Double,
-               @BeanProperty var disk:Int,
-               @BeanProperty var usb:Int = 2)
+               @BeanProperty val disk:Int,
+               @BeanProperty val usb:Int = 2) {
+
+  // Not the more elegant way.
+  // 1. To enforce immutability, we do not change the internal state of the object, but instead we create a new one.
+  //    Note that we have changed the 'disk' and 'usb' member from 'var' to 'val'.
+  // 2. We return a new Computer, with the memory parameter that has been passed and the current parameters held by the object.
+  def upgradeMemory(memory:Long) = new Computer(memory, this.cpu, this.disk, this.usb)
+
+  // Better approach.
+  // Uses default parameters instead the need to have 1 upgrade method per member.
+  def upgrade(memory:Long = this.memory,
+              cpu:Double = this.cpu,
+              disk:Int = this.disk,
+              usb:Int = this.usb) = {
+    new Computer(memory, cpu, disk, usb)
+  }
+}
