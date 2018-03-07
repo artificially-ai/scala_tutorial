@@ -19,6 +19,15 @@ val c4 = c3.upgrade(disk = 512)
 println(c4.memory, c4.disk)
 
 try {
+  c2.upgradeMemory(1024)
+} catch {
+  // The implies, or rocket, operator is used below '=>'
+  case iae:IllegalArgumentException => println(iae.getMessage)
+} finally {
+  println("Continue execution.")
+}
+
+try {
   new Computer(memory = 128, disk = 256, usb = 4, cpu = 2.5)
 } catch {
   // The implies, or rocket, operator is used below '=>'

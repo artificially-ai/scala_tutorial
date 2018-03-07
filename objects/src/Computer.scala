@@ -26,7 +26,15 @@ class Computer(@BeanProperty var memory:Long,
   // 1. To enforce immutability, we do not change the internal state of the object, but instead we create a new one.
   //    Note that we have changed the 'disk' and 'usb' member from 'var' to 'val'.
   // 2. We return a new Computer, with the memory parameter that has been passed and the current parameters held by the object.
-  def upgradeMemory(memory:Long) = new Computer(memory, this.cpu, this.disk, this.usb)
+  def upgradeMemory(memory:Long) = {
+
+    // Another way to do it is by thrown exception is something is not okay. Although, I would use require instead.
+    if (memory < 8192)
+      throw new IllegalArgumentException("Memory must be greater than or equal to 8192.")
+
+    new Computer(memory, this.cpu, this.disk, this.usb)
+  }
+
 
   // Better approach.
   // Uses default parameters instead the need to have 1 upgrade method per member.
@@ -34,6 +42,9 @@ class Computer(@BeanProperty var memory:Long,
               cpu:Double = this.cpu,
               disk:Int = this.disk,
               usb:Int = this.usb) = {
+    require(memory >= 8192, "Memory must be greater than or equal to 8192.")
+    require(cpu >= 1.5, "CPU must be greater than or equal to 1.5.")
+
     new Computer(memory, cpu, disk, usb)
   }
 }
