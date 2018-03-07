@@ -163,4 +163,7 @@ To get a glimpse on how it all works, have a look at the ```Computer.scala``` cl
 - Again, like in Java, attributer that belong to the superclass are sent to its constructor.
 - And guess what, polymorphism also applies.
 
-But wait! That doesn't have anything to do with Java, that's all about Object Orientation. Ah, we are fine! ;)
+* But wait! That doesn't have anything to do with Java, that's all about Object Orientation. Ah, we are fine! ;)
+
+- The inheritance example is depicted in the ```Models.scala``` class and execution-wise, more details can be found in the ```ModelsScript.scala```.
+  Yes, as I said previously, we don't need the file name to be the same as the class name. Moreover, there can be multiple classes per file. I mean, multiple public classes.
