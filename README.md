@@ -246,4 +246,6 @@ To know more about how using it with classes, please refer to the following file
 
 No extra explanation needed.
 
-#### Parameterised Methods in Methods 
+#### Parameterised Methods in Classes
+
+Again, nothing really special here if you are already used to Java generics. Have a look at the same files I depicted above for examples on how to use it.
