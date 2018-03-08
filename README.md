@@ -234,4 +234,16 @@ If you come from Java, C++, C#, etc., you know what abstract classes mean. There
 
 Have a look at the ```Models.scala``` file and the new abstract class that has been added.
 
-#### Parameterised Types
+#### Parameterised Types on Classes
+
+We have already seen Parameterised Types with Scala. So, it is not very different from Java and you have a lot of freedom. I mean, it's the same thing.
+To know more about how using it with classes, please refer to the following files:
+
+- ```Box.scala``` class
+- ```Couple.scala``` class
+- ```BoxScript.scala``` script
+- ```CoupleScript.scala``` script
+
+No extra explanation needed.
+
+#### Parameterised Methods in Methods 
