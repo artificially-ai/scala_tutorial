@@ -233,3 +233,5 @@ If you come from Java, C++, C#, etc., you know what abstract classes mean. There
 - Use the ```abstract``` keyword in the class declaration.
 
 Have a look at the ```Models.scala``` file and the new abstract class that has been added.
+
+#### Parameterised Types
