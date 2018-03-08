@@ -17,14 +17,31 @@
 
 class Person(val firstName:String, val lastName:String, val address:String = "Unknown") {
 
-  // As you can see, the ancillary constructor needs no 'val' or 'var' declaration.
-  // It's all done in the primary constructor, which already declares all the class needs.
-  def this(firstName:String, lastName:String) = this(firstName, lastName, "Netherlands")
-
   // This method will be overridden in the Employee class.
   def fullName = s"$firstName $lastName"
 
   def update(firstName:String = this.firstName, lastName:String = this.lastName, address:String) = {
     new Person(firstName, lastName, address)
   }
+
+  override def equals(x:Any):Boolean = {
+    if (!x.isInstanceOf[Person]) false
+    else {
+      val other = x.asInstanceOf[Person]
+      other.firstName == this.firstName &&
+      other.lastName == this.lastName &&
+      other.address == this.address
+    }
+  }
+
+  override def hashCode:Int = {
+    // It's fine to use var here. It will be mutable only within the context of this method.
+    var result = 19
+    result = 31 * result + firstName.hashCode
+    result = 31 * result + lastName.hashCode
+    result = 31 * result + address.hashCode
+    result
+  }
+
+  override def toString:String = s"{'firstName' : '$firstName', 'lastName' : '$lastName', 'address' : '$address'}"
 }

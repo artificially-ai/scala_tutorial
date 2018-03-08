@@ -15,11 +15,24 @@
 // Using the secondary constructor
 val p1 = new Person("Wilder", "Rodrigues")
 println(p1.firstName)
-
-p1.lastName = "Cabral Rodrigues"
-println(p1.lastName)
 println(p1.address)
 
 // Using the primary constructor
-val p2 = new Person("Wilder", "Rodrigues", "Netherlands")
+val p2 = new Person("Wilder", "Rodrigues", "Vleuten")
 println(p2.address)
+
+println("Equals should return false -> %s".format(p1 == p2))
+println("hashCode should be different (false) -> %s".format(p1.hashCode == p2.hashCode))
+
+val p3 = p1.update(address = "Vleuten")
+
+println("Equals should return true -> %s".format(p2 == p3))
+println("hashCode should be the same (true) -> %s".format(p3.hashCode == p2.hashCode))
+
+// Check reference equality
+println("Reference should be false -> %s".format(p2 eq p3))
+
+val p4 = p3
+println("Reference should be true -> %s".format(p3 eq p4))
+
+println(p4.toString)
