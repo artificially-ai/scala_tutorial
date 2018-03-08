@@ -211,3 +211,25 @@ Have a look at the ```ModelsScript.scala``` for further understanding.
   Feel free to do whatever you want. Again, have a look at the ```Person.scala``` class.
 
 Remark: when using an IDE, the three methods explained above should be easy to generate in an automatic fashion.
+
+#### Case Classes
+
+And now the time to forget about writing ```equals```, ```toString``` and ```hashCode``` has come! Yes, just use the keyword ```case``` before ```class``` in your class declaration. Done!
+
+What else does ```case``` bring to the table?
+
+- No need to use the ```new``` keyword when instantiating classes.
+- No need to use the ```val``` before the constructor parameters.
+- It creates a ```copy``` method which can be used to create a new object of an instance (GoF Memento Pattern).
+- It has automatic pattern matching.
+- However, case classes cannot be subclassed. It makes them good to be domain model classes.
+
+If you don't like the ```toString``` implementation, for example, just implement your own. Have a look at the ```Models.scala``` and look for the ```Department``` class.
+
+#### Abstract Classes
+
+If you come from Java, C++, C#, etc., you know what abstract classes mean. There are only a few things here that I should mention.
+
+- Use the ```abstract``` keyword in the class declaration.
+
+Have a look at the ```Models.scala``` file and the new abstract class that has been added.
