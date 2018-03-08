@@ -249,3 +249,16 @@ No extra explanation needed.
 #### Parameterised Methods in Classes
 
 Again, nothing really special here if you are already used to Java generics. Have a look at the same files I depicted above for examples on how to use it.
+
+#### Singleton Objects
+
+Objects are cool, but how cool are they in Scala? No, I'm not talking about class instances, which are objects, but singleton objects with boilerplate code.
+So, in Scala 'object' is a keyword used to declare singletons (yep, from the GoF Patterns). Since there is no 'static' in Scala, creating a singleton the way
+we do in Java would be a bit difficult. So, objects to the rescue!
+
+Besides singletons, objects are good for factory methods, pattern matching logic, default values, main method, etc.
+
+Have a look at the ```ObjectsScript.scala``` for more details.
+
+Okay, you might have got it a long ago. But what do we have to do to get a main method? Have a look at the ```Runner.scala``` and, for a simpler version, also
+look at the ```RunnerApp.scala```.
