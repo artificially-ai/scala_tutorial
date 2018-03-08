@@ -13,3 +13,6 @@ println(box6.t)
 
 val box7 = Box(Box(3.14))
 println(box7.t.t)
+
+val box8 = box7.boxedCouple("PI")
+println(box8)
