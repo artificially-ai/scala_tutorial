@@ -177,3 +177,11 @@ Again, there are only a few differences when compared to Java, and that's not on
 
 A new method, called ```fullName```, was added to the class ```Person.scala``` and is being overridden in the ```Employee``` class, which lies inside the ```Models.scala```
 Have a look at the ```ModelsScript.scala``` for further understanding.
+
+#### Method Overloading
+
+- Method overloading does not have a special keyword. It works just like in Java. So, if have method A(param1, param2) and want to overload it to add an extra parameter.
+  To achieve that, just define a method A(param1, param2, param3) and you are good to go.
+- There is one small thing about method overloading, though: it does not work if the method being overloaded contains default parameters.
+  To confirm this problem, have a look at the ```Models.scala```. There I overloaded the 'update' method, which is declared in the ```Person.scala``` class. The overloading method
+  is currently commented out. Please, remove the comment blocks and try compiling the file.
