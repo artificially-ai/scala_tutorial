@@ -1,4 +1,4 @@
-val department = new Department("Computer Science")
+val department = new Department("Computer Science", "Technology")
 val p1 = new Person("Wilder", "Rodrigues", "Netherlands")
 val e1 = new Employee("Wilder", "Rodrigues", "Vleuten", department)
 
@@ -27,3 +27,28 @@ def printDeptName(e:Employee) {
 // So, since both classes contain the 'fullName' method, it will use the one which is part of the instance.
 println(e2.fullName)
 println(p2.fullName)
+
+val d1 = Department("HR", "Technology")
+val d2 = Department("Finance", "Technology")
+
+println(d1.name)
+println(d2.name)
+
+println("Should be false -> %s".format(d1 == d2))
+
+val d3 = d2.copy(name = "HR")
+println("Should be true -> %s".format(d3 == d1))
+
+println("Should be false -> %s".format(d1 eq d2))
+
+val d4 = d1
+println("Should be true -> %s".format(d1 eq d4))
+
+// Pattern Matching (comes for free on case classes)
+
+val r1 = d1 match {
+                case Department(n, m) => s"department is '$n' and business unit is '$m'"
+                case _ => "Unknown" // Default case block.
+              }
+
+println(r1)

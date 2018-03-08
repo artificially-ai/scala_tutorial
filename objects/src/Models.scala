@@ -1,4 +1,11 @@
-class Department(val name:String)
+abstract class BusinessUnit {
+  def buName:String
+}
+
+/*
+* Because Department is a case class, it will create a 'buName' accessor method.
+*/
+case class Department(name:String, buName:String) extends BusinessUnit
 
 /*
 * The parameters on the Employee constructor have no 'val' or 'var' type modifier because they
