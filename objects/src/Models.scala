@@ -8,4 +8,11 @@ class Department(val name:String)
 *
 */
 class Employee(firstName:String, lastName:String, address:String, val department:Department)
-  extends Person(firstName, lastName, address)
+  extends Person(firstName, lastName, address) {
+
+  /*
+  * Overrides the fullName method from the Person class. It is a simple method, just doing String interpolation
+  * so we concatenated the class members in a cleaner way.
+  */
+  override def fullName = s"$firstName $lastName - $department.name" 
+}

@@ -20,4 +20,7 @@ class Person(val firstName:String, val lastName:String, val address:String = "Un
   // As you can see, the ancillary constructor needs no 'val' or 'var' declaration.
   // It's all done in the primary constructor, which already declares all the class needs.
   def this(firstName:String, lastName:String) = this(firstName, lastName, "Netherlands")
+
+  // This method will be overridden in the Employee class.
+  def fullName = s"$firstName $lastName"
 }
