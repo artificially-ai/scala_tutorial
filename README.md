@@ -167,3 +167,13 @@ To get a glimpse on how it all works, have a look at the ```Computer.scala``` cl
 
 - The inheritance example is depicted in the ```Models.scala``` class and execution-wise, more details can be found in the ```ModelsScript.scala```.
   Yes, as I said previously, we don't need the file name to be the same as the class name. Moreover, there can be multiple classes per file. I mean, multiple public classes.
+
+#### Method Overriding
+
+Again, there are only a few differences when compared to Java, and that's not only about syntax-sugar. Below some details on how to work with method overriding.
+
+- The keyword ```override``` is mandatory. In Java we have an annotation which only indicates that a particular methods overrides another, but it can be omitted.
+- Of course, like in Java, the signature must be the same. Otherwise, it is not overriding, but overloading - which I will explain later.
+
+A new method, called ```fullName```, was added to the class ```Person.scala``` and is being overridden in the ```Employee``` class, which lies inside the ```Models.scala```
+Have a look at the ```ModelsScript.scala``` for further understanding.
