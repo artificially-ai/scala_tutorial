@@ -5,7 +5,9 @@ abstract class BusinessUnit {
 /*
 * Because Department is a case class, it will create a 'buName' accessor method.
 */
-case class Department(name:String, buName:String) extends BusinessUnit
+case class Department(name:String, buName:String) extends BusinessUnit {
+  override def toString() = s"{'name' : '$name'. 'business_unit' : '$buName'}"
+}
 
 /*
 * The parameters on the Employee constructor have no 'val' or 'var' type modifier because they
@@ -31,4 +33,8 @@ class Employee(firstName:String, lastName:String, address:String, val department
     new Employee(firstName, lastName, address, department)
   }
 */
+
+  override def toString() = s"""{'firstName' : '$firstName', 'lastName' :
+                            |'$lastName', 'address' : '$address',
+                            |'department' : '$department'}""".stripMargin
 }
