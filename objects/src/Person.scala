@@ -23,4 +23,8 @@ class Person(val firstName:String, val lastName:String, val address:String = "Un
 
   // This method will be overridden in the Employee class.
   def fullName = s"$firstName $lastName"
+
+  def update(firstName:String = this.firstName, lastName:String = this.lastName, address:String) = {
+    new Person(firstName, lastName, address)
+  }
 }
