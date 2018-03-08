@@ -185,3 +185,29 @@ Have a look at the ```ModelsScript.scala``` for further understanding.
 - There is one small thing about method overloading, though: it does not work if the method being overloaded contains default parameters.
   To confirm this problem, have a look at the ```Models.scala```. There I overloaded the 'update' method, which is declared in the ```Person.scala``` class. The overloading method
   is currently commented out. Please, remove the comment blocks and try compiling the file.
+
+#### equals
+
+- As the name suggests, ```equals``` is used to test equality of values between two objects. For example, if we have created 2 instances of the class 'Person' with the same
+  first name, last name and address, checking for value equality should return ```true```.
+- The ```equals``` method is defined in the ```AnyRef``` class, which means that we have to override it. If we simply check for equality, without overriding the method, it will
+  return false, since that the default implementation in the ```AnyRef``` class does not take into account the class members we have defined.
+- After defining out ```equals``` method, with can call it using the ```==``` operator; that's equivalent to the equals, so not really like Java ```==```, which checks for
+  reference equality.
+- In Scala, to check for reference equality, or if objects reference the same instance, we have to use the operator ```eq```. Check the ```Person.scala``` and
+  the ```PersonScript.scala``` file.
+
+#### hashCode
+
+- The ```hasCode``` method is used to return a hash, a unique as possible identifying number, which is related to a particular object. It's also used as a link by the JVM
+  to help fetching where in the memory a given object is stored. So, it's not the memory address itself.
+- As with ```equals```, the ```hashCode``` method is also defined in the ```AnyRef``` class. In order to use it, we have to add our own implementation to our classes. This is
+  a must have for any domain model class since the method is used in Maps.
+- The ```hashCode``` implementation used here is suggested by Josh Block in his Effective Java 2nd Edition book. Have a look at the ```Person.scala``` class to see how it's done.
+
+#### toString
+
+- The ```toString``` method kicks in when we need a human readable representation of an object. As the other two, it's also defined in the ```AnyRef``` class. It's implementation?
+  Feel free to do whatever you want. Again, have a look at the ```Person.scala``` class.
+
+Remark: when using an IDE, the three methods explained above should be easy to generate in an automatic fashion.
