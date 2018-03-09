@@ -274,3 +274,14 @@ Those type of objects are still singletons, but it has some specific things and 
 - Since objects are singletons, whatever state it has will be shared amongst the instances of the class it accompanies.
 
 You will find some application of Companion Objects in the ```SecretAgents.scala``` and ```SuperHeroes.scala``` files.
+
+#### The Apply Method
+
+The ```apply``` method brings some special juice to Scala. It helps the programmer to write less and less code. All the boilerplate you are use to will be gone!
+
+- If a method is called ```apply```, you don't have to call it explicitly
+- It can be used in both classes and objects.
+- Although we haven't seen it, it has already been used in this tutorial: case classes. Yes, they not only declare accessor methods automatically,
+  but they also create a companion object for the class and apply methods to be used as factory methods.
+
+To see how it is possible, please refer to the ```Cars.scala``` file.
