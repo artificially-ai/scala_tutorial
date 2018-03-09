@@ -1,6 +1,6 @@
 /*
 * Compile and run the code:
-* scalac -d classes  src/*.scala
+* scalac -d classes  src/SecretAgentRunner.scala
 * scala -cp classes SecretAgentRunner
 */
 
