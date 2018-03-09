@@ -285,3 +285,13 @@ The ```apply``` method brings some special juice to Scala. It helps the programm
   but they also create a companion object for the class and apply methods to be used as factory methods.
 
 To see how it is possible, please refer to the ```Cars.scala``` file.
+
+#### Infix Operators
+
+Infix operators help to clean the code a bit by removing the dot and parenthesis of a method call. It is usually used when the method has just one parameter, but it is
+not limited to that.
+
+For example, when we do "3 + 4", it is actually calling the method "3.+(4)". So, mathematical operations in Scala use infix operators. Another application of infix
+operators is chain reaction. For instance, implementing a Chain of Responsibility Pattern would be quite easy with Scala.
+
+To have a look on how fun infix operators are, have a look at the ```ChainReaction.scala``` file.
