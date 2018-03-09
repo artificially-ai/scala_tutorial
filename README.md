@@ -295,3 +295,11 @@ For example, when we do "3 + 4", it is actually calling the method "3.+(4)". So,
 operators is chain reaction. For instance, implementing a Chain of Responsibility Pattern would be quite easy with Scala.
 
 To have a look on how fun infix operators are, have a look at the ```ChainReaction.scala``` file.
+
+#### Right Associative Colons
+
+Time to some more Scala magic! I won't write much about it. So, please have a look at the ```ColonsScript.scala``` file.
+
+- If a method ends in a colon, you may invoke it in a right associative way.
+- It mush be invoked as an infix method.
+- This technique is primarily used with Lists and Streams.
