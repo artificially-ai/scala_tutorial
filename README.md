@@ -262,3 +262,15 @@ Have a look at the ```ObjectsScript.scala``` for more details.
 
 Okay, you might have got it a long ago. But what do we have to do to get a main method? Have a look at the ```Runner.scala``` and, for a simpler version, also
 look at the ```RunnerApp.scala```.
+
+#### Companion Objects
+
+Those type of objects are still singletons, but it has some specific things and applications are slightly different from what we saw above.
+
+- A Companion Object must have the same name as the class
+- A Companion Object have to be in the same file where the class is declared
+- Private information is shared between the Class and the Companion Object
+- A Companion Object cannot have a main method.
+- Since objects are singletons, whatever state it has will be shared amongst the instances of the class it accompanies.
+
+You will find some application of Companion Objects in the ```SecretAgents.scala``` and ```SuperHeroes.scala``` files.
