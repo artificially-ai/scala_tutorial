@@ -303,3 +303,12 @@ Time to some more Scala magic! I won't write much about it. So, please have a lo
 - If a method ends in a colon, you may invoke it in a right associative way.
 - It mush be invoked as an infix method.
 - This technique is primarily used with Lists and Streams.
+
+#### Options
+
+Who like "null" values? Nobody, right? Or at least, most of experienced programmers might be in favour of having something other then
+the vast void of space. For that Optionals come in hand. Java have them, since Java 8. And So has Scala, but way before that.
+
+In Scala they are called Options. An ```Option``` can be of Some or None type. As the types suggests, ```Some``` contains something, whilst ```None``` doesn't contain any.
+
+For some examples, no pun intended, have a look at the ```Options.scala``` file.
