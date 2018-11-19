@@ -312,3 +312,5 @@ the vast void of space. For that Optionals come in hand. Java have them, since J
 In Scala they are called Options. An ```Option``` can be of Some or None type. As the types suggests, ```Some``` contains something, whilst ```None``` doesn't contain any.
 
 For some examples, no pun intended, have a look at the ```Options.scala``` file.
+
+#### Tuples

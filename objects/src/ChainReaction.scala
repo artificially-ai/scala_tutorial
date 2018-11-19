@@ -1,9 +1,9 @@
 import scala.language.postfixOps
 
 class ChainReaction private(command:Command) {
-  def ==>(c:Command) = {
+  def ==>(chain: ChainReaction) = {
     command.execute()
-    ChainReaction(c)
+    chain
   }
 
   def <==() = {
@@ -62,7 +62,10 @@ object ChainRunner extends App {
   val r1 = ChainReaction(c1)
 
   val c2 = UploadCommand()
-  val end = EndCommand()
+  val r2 = ChainReaction(c2)
 
-  println(r1 ==> c2 ==> end <==)
+  val end = EndCommand()
+  val r3 = ChainReaction(end)
+
+  println(r1 ==> r2 ==> r3 <==)
 }
